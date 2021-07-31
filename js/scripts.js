@@ -6,7 +6,21 @@
 //
 // Scripts
 // 
-
+const typed = document.getElementById('typed')
+  if (typed) {
+      console.log(typed)
+    let typed_strings = typed.getAttribute('data-typed-items')
+    console.log(typed_strings)
+    typed_strings = typed_strings.split(',')
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+  document.getElementById('typed').typed
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
